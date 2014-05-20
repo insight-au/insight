@@ -1,0 +1,92 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Exercises</title>
+</head>
+
+<body background="images/backgrnd.gif" bgproperties="fixed">
+
+<p><font face="Verdana" color="#FF0000"><u><big>Try these too!</big><br>
+</u></font></p>
+
+<p><font face="Verdana" color="#800040"><big>1. Find the square root of the following
+numbers up to 3 decimal places (use mishrank wherever necessary):</big></font></p>
+
+<blockquote>
+  <p><font face="Verdana" color="#E34A00"><big>a. 107</big></font></p>
+  <p><font color="#004040"><font face="Verdana"><big>Answer:&nbsp;&nbsp;&nbsp; </big></font><input
+  TYPE="text" SIZE="20" NAME="T1"> </font></p>
+  <p><font face="Verdana" color="#E34A00"><big>b. 736</big></font></p>
+  <p><font color="#004040"><font face="Verdana"><big>Answer:&nbsp;&nbsp;&nbsp; </big></font><input
+  TYPE="text" SIZE="20" NAME="T2"> </font></p>
+  <p><font face="Verdana" color="#E34A00"><big>c. 2437</big></font></p>
+  <p><font color="#004040"><font face="Verdana"><big>Answer:&nbsp;&nbsp;&nbsp; </big></font><input
+  TYPE="text" SIZE="20" NAME="T3"> </font></p>
+  <p><font face="Verdana" color="#E34A00"><big>d. 9555 </big></font></p>
+  <p><font color="#004040"><font face="Verdana"><big>Answer:&nbsp;&nbsp;&nbsp; </big></font><input
+  TYPE="text" SIZE="20" NAME="T4"> </font></p>
+  <p><font face="Verdana" color="#E34A00"><big>e. 68943</big></font></p>
+  <p><font color="#004040"><font face="Verdana"><big>Answer:&nbsp;&nbsp;&nbsp; </big></font><input
+  TYPE="text" SIZE="20" NAME="T5"> </font></p>
+</blockquote>
+
+<p align="center"><font color="#FF0000"><font face="Verdana"><big>Your </big></font><input
+LANGUAGE="VBScript" TYPE="button" VALUE="Score"
+ONCLICK="score=0
+if trim(t1.value) = &quot;10.344&quot; then
+	score=score+1
+end if
+
+if trim(t2.value) = &quot;27.129&quot; then
+	score=score+1
+end if
+
+if trim(t3.value) = &quot;49.365&quot; then
+	score=score+1
+end if
+
+if trim(t4.value) = &quot;97.749&quot; then
+	score=score+1
+end if
+
+if trim(t5.value) = &quot;262.569&quot; then
+	score=score+1
+end if
+
+t1.value=&quot;&quot;
+t2.value=&quot;&quot;
+t3.value=&quot;&quot;
+t4.value=&quot;&quot;
+t5.value=&quot;&quot;
+if score = 0 then
+msgbox &quot;Sorry. You got none correct.&quot;,vbOKOnly,&quot;Sorry&quot;
+end if
+
+if score = 1  then 
+  msgbox &quot;Sorry. You got only 1 answer correct. Try to improve.&quot;,vbOKOnly,&quot;Sorry&quot;
+end if
+
+if score = 2  then 
+  msgbox &quot;You got 2 answers correct. Try for a better score next time.&quot;,vbOKOnly,&quot; &quot;
+end if
+
+if score = 3  then 
+  msgbox &quot;You got 3 answers correct. Better luck next time !&quot;,vbOKOnly,&quot; &quot;
+end if
+
+if score = 4  then 
+  msgbox &quot; Good. You got 4 answers correct. Try for 100%!&quot;,vbOKOnly,&quot;Good&quot;
+end if
+
+if score = 5  then 
+  msgbox &quot; Great work! You got all answers correct! Keep it up.&quot;,vbOKOnly,&quot;Great&quot;
+end if"
+NAME="B1"> </font></p>
+
+<p align="center"><font face="Verdana" color="#FF0000"><big>Click for</big></font> <input
+LANGUAGE="VBScript" TYPE="button" VALUE="Answers"
+ONCLICK="msgbox &quot; The answers are :&quot;+chr(10)+&quot;1) 10.344&quot;+chr(10)+&quot;2) 27.129&quot;+chr(10)+ &quot;3) 49.365&quot;+chr(10)+ &quot;4) 97.749&quot;+chr(10)+ &quot;5) 262.569&quot;,vbOKOnly,&quot;Answers&quot;"
+NAME="B2"> </p>
+</body>
+</html>

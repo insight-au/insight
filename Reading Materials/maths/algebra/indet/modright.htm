@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<meta name="Microsoft Border" content="none">
+<meta name="Microsoft Theme" content="none">
+<title>Kuttaka</title>
+</head>
+
+<body background="../images/pastel.jpg">
+
+<p><font face="Comic Sans MS" size="2"><strong>Steps for formation of the table in
+Bhaskara's method :</strong></font></p>
+
+<p><font face="Comic Sans MS" size="2">In Bhaskara's method, it is not necessary to find a
+multiplier and a quotient as was done in Aryabhatta's method. The constant in the equation
+and 0 are added to the table, instead.</font></p>
+
+<table border="1" cellpadding="0" cellspacing="0" width="50%">
+  <tr>
+    <td width="51%"><font face="Comic Sans MS" size="2">137 = 60 * <strong>2</strong> + 17<br>
+    60 = 17 * <strong>3</strong> + 9<br>
+    17 = 9 *<strong>1</strong> + 8<br>
+    9 = 8 * <strong>1</strong> + 1</font></td>
+    <td width="24%" align="center"><p align="center"><font face="Comic Sans MS" size="2">2<br>
+    3<br>
+    1<br>
+    1</font></td>
+  </tr>
+  <tr>
+    <td width="51%"><font face="Comic Sans MS" size="2">Table 1</font></td>
+    <td width="24%" align="center"><p align="center"><font face="Comic Sans MS" size="2">Q</font></td>
+  </tr>
+</table>
+
+<p><font face="Comic Sans MS" size="2">The number of rows of the table is the number quotients (number of rows of Column Q in Table 1), plus 2. <br><br>1) Column 1 of Rows 6,5,4,3 will contain the column
+Q of the above table.<br>
+2) Column 1 of Row 2 will contain the constant (=10) and that of Row 1 will contain 0.<br>
+3) Now, start from the bottom. (R1,C2) = 0,(R2, C2) = 10<br>
+4) (R3,C2) = (R2,C2) * (R3,C1) + (R1,C2) <br>
+&nbsp;&nbsp;&nbsp; (R3,C2) = 10 * 1 + 0 = 10.<br>
+5) (R4,C2) = (R3,C2) * (R4,C1) + (R2,C2)<br>
+&nbsp;&nbsp;&nbsp; (R4,C2) = 10 * 1 + 10 = 20<br>
+6) (R5,C2) = (R4,C2) * (R5,C1) + (R3,C2)<br>
+&nbsp;&nbsp;&nbsp; (R5,C2) = 20 * 3 + 10 = 70<br>
+7) (R6,C2) = (R5,C2) * (R6,C1) + (R4,C2)<br>
+&nbsp;&nbsp;&nbsp; (R6,C2) = 70 * 2 + 20 = 160</font></p>
+
+<p><font face="Comic Sans MS" size="2">Therefore,<strong> x = 70</strong> and<strong> y =
+160</strong>.</font></p>
+
+<p><font face="Comic Sans MS" size="2">In general, the <strong>contents of (Rn,C2)</strong>
+i.e. Row n,Column 2 (except the last 2 rows) will be <strong>(R<sub>n-1</sub>,C2) * (Rn,
+C1) + (R<sub>n-2</sub>, C2)</strong>.&nbsp; <br>
+Notice here, that we get a solution which is different from that obtained in Aryabhatta's
+method.</font></p>
+
+<p>&nbsp;</p>
+</body>
+</html>

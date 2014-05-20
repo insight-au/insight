@@ -1,0 +1,26 @@
+<html>
+
+<head><script LANGUAGE="JAVAScript">
+function goback()
+{
+window.history.back(1);
+}
+function playfile(filename)
+{
+win=window.open(filename,'','0, 0, 0, 0, 0, 0, 0, 0, 0, 0','noreplace');
+win.resizeTo(0,0);
+window.alert('Press the OK button to stop playing the audio track.');
+setTimeout('win.close()',10);
+}
+</script>
+
+<bgsound src="blank.wav">
+<title></title>
+</head>
+
+<body background="\B-grygrd.jpg" link="#FF0000" vlink="#FF0000" alink="#FF0000"
+topmargin="0" leftmargin="0">
+
+<p><a href="javascript:goback();">aaaaaaaa</a></p>
+</body>
+</html>

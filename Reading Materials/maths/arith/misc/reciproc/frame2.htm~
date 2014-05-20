@@ -1,0 +1,121 @@
+<html>
+
+<head>
+<title>THE METHOD</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<meta name="Microsoft Border" content="none">
+<meta name="Microsoft Theme" content="blends 011">
+<base target="_parent">
+</head>
+
+<body background="images/blegtext.gif" bgcolor="#CCCCCC" text="#000000" link="#990000"
+vlink="#666666" alink="#CC9900">
+<!--mstheme--><font face="trebuchet ms, arial, helvetica"><!--mstheme--></font>
+
+<h4 align="center"><!--mstheme--><font face="trebuchet ms, arial, helvetica" color="#330099"><font
+face="Mercurius Script MT Bold" color="#400080"><big><big>THE METHOD</big></big></font><!--mstheme--></font></h4>
+<!--mstheme--><font face="trebuchet ms, arial, helvetica">
+
+<p><font face="Comic Sans MS" color="#400080">The rightmost of the recurring digits is
+1.Write 1 at the right most position. Initially, there is no carry.</font></p>
+
+<p><font face="Comic Sans MS" color="#400080">1/19 = ._ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <u>1<br>
+</u>Multiply it with 2, which is 1 more than the penultimate digit of the given number and
+add the carry to get the partial sum. Write the partial sum as the next (from right) digit.</font></p>
+
+<p><font face="Comic Sans MS" color="#400080">1/19 = ._ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <u>2</u>
+<u>1</u> <br>
+Repeat this process by multiplying the last digit obtained, by 2.   Whenever the partial sum
+exceeds 10, divide the partial sum by 10. The remainder gives the next digit, and the
+quotient is taken as the carry</font></p>
+
+<p><font face="Comic Sans MS" color="#400080">After 4 steps the result will be,</font></p>
+
+<p><font face="Comic Sans MS" color="#400080">1/19 = ._ _ _ _ _ _ _ _ _ _ _ _ _ _ <u>8</u>
+<u>4</u> <u>2</u> <u>1</u> <br>
+Now the last digit is 8. Multiplying by 2 the product will be 16. The quotient on dividing
+16 by 10 is 1, which is taken as the carry. The remainder 6 is the next digit. So in the
+next step the result is,</font></p>
+
+<p><font face="Comic Sans MS" color="#400080">1/19 = ._ _ _ _ _ _ _ _ _ _ _ _ _ <u>6</u> <u>8</u>
+<u>4</u> <u>2</u> <u>1</u> (carry = 1)<br>
+So in the next step, multiply 6 by 2 to get 12 and add the carry 1 to get 13.</font></p>
+
+<p><font face="Comic Sans MS" color="#400080">1/19 = ._ _ _ _ _ _ _ _ _ _ _ _ <u>3</u> <u>6</u>
+<u>8</u> <u>4</u> <u>2</u> <u>1</u> (carry = 1)<br>
+Proceeding in a similar manner, after 18 steps the value is<br>
+</font></p>
+
+<p><font face="Comic Sans MS" color="#400080">1/19 = .<u>_</u> <u>5</u> <u>2</u> <u>6</u> <u>3</u>
+<u>1</u> <u>5</u> <u>7</u> <u>8</u> <u>9</u> <u>4</u> <u>7</u> <u>3</u> <u>6</u> <u>8</u> <u>4</u>
+<u>2</u> <u>1 (carry = 0)<br>
+</u>When the last digit 5 is multiplied by 2 and the carry 0 is added, we get 10. So we
+write 0 as the next digit to get</font></p>
+
+<p><font face="Comic Sans MS" color="#400080">1/19 = .<u>0</u> <u>5</u> <u>2</u> <u>6</u> <u>3</u>
+<u>1</u> <u>5</u> <u>7</u> <u>8</u> <u>9</u> <u>4</u> <u>7</u> <u>3</u> <u>6</u> <u>8</u> <u>4</u>
+<u>2</u> <u>1 (carry = 1)<br>
+</u>Now, if we multiply the last digit 0 by 2 and add the carry 1, we get the partial sum
+as 1, which is the digit where we started. Proceeding with the above process will lead
+only in the repetition of the above sequence. Hence we stop here. The entire calculation
+involved simple multiplication and addition and can be done mentally!</font></p>
+
+<p>&nbsp;</p>
+
+<p><font face="Comic Sans MS" color="#400080">The method for finding the reciprocal of any
+number n, which is of the form 10x + 9, is as follows:</font></p>
+
+<p><font face="Comic Sans MS" color="#400080">1. The last digit of the recurring set of
+numbers of the reciprocal is 1<br>
+2. Initially the carry is 0<br>
+3. Multiply the latest digit of the result by (x+1) and add with the previous carry to get
+a partial sum.<br>
+4. Divide the partial sum by 10. Write the remainder as the latest digit of the result and
+mark the quotient as the carry.<br>
+5. Repeat steps 3 and 4 till the partial sum becomes 1.<br>
+</font></p>
+
+<p><font face="Comic Sans MS" color="#400080">This method is based on a sutra called <em><strong>'Ekadhikena
+Purvena',</strong></em> which means '<strong>By one more than the previous one</strong>'.</font></p>
+
+<p><font color="#400080"><font face="Comic Sans MS">In the given example, the last digit
+is 9. The previous digit is 1. One more than the previous digit is 2. In accordance with
+the sutra, we multiply it 2. Similarly the multiplier for 49 is 5, for 149 is 15, for
+12789 is 1279 and so o</font>n.</font></p>
+
+<p>&nbsp;</p>
+
+<p><font size="5" face="Brush Script MT" color="#400080">Finally, yet another shortcut!.
+If you observe the reciprocal of 19, the recurring part has 18 digits. You'll see that the
+18th digit and the 9th digit added together gives 9. Similarly, the sum of 17th and 8th
+digits, 16th and 7th digits etc. give 9. Thus by finding the last 9 digits of the result,
+we can get the ramaining 9 digits by merely subtracting from 9! The workload has become
+half! But how'll you know that you've reached the half stage? You've reached the half-way
+mark, once the partial sum is equal to one less than the number!</font></p>
+
+<p><font size="5" face="Brush Script MT" color="#400080">Want to see one more example?
+Click here to see the working of 49's reciprocal.</font></p>
+
+<p><font face="Comic Sans MS" color="#400080">Try out the reciprocals of the following
+numbers</font> </p>
+
+<ol>
+  <li><font face="Comic Sans MS" color="#400080">99</font></li>
+  <li><font face="Comic Sans MS" color="#400080">29</font></li>
+  <li><font face="Comic Sans MS" color="#400080">79</font></li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p><strong><a href="../../index.htm#contents"><img src="../cubing/images/up.gif"
+width="60" height="56" alt="Up to Arithmetic" align="absmiddle"></a> </strong><a
+href="../../index.htm#contents"><font color="#BB3C5F" face="Copperplate Gothic Bold"><big>Up
+to Arithmetic</big></font></a></p>
+
+<p><strong><a href="../../../index.htm#contents"><img src="../cubing/images/back.gif"
+width="60" height="56" alt="Home" align="absmiddle"></a> </strong><a
+href="../../../index.htm#contents" target="_parent"><font color="#BB3C5F"
+face="Copperplate Gothic Bold"><big>Back to Home</big></font></a></p>
+<!--mstheme--></font>
+</body>
+</html>

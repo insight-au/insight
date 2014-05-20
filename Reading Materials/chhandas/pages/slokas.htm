@@ -1,0 +1,653 @@
+<html>
+<head><script LANGUAGE="VBScript">
+<!--
+dim i
+
+Sub Extract(txtString)
+   strScheme = vbNullString
+    For i = 1 To Len(txtstring)
+       If (Mid(txtstring, i, 1) <> " ") Then
+          strScheme = strScheme & Mid(txtstring, i, 1)
+        End If
+    Next
+end sub
+dim strScheme
+-->
+</script>
+
+<title></title>
+<base target="bottom">
+</head>
+
+<body background="../images/Canvas.jpg" bgproperties="fixed" text=black>
+
+<p></font><font face="Trebuchet MS" size="3">While solving the following verses, these are
+the things you should do :</font> 
+
+<ul>
+  <li><font face="Trebuchet MS" size="3">If the verse is of anuShThup (shloka) type, then
+    write '<strong>shloka</strong>' in the text box provided.</font></li>
+  <li><font face="Trebuchet MS" size="3">If the verse is of other samavrttam type, write the
+    scheme in the text box.</font></li>
+  <li><font face="Trebuchet MS" size="3">For ardhavrttam and upajaati, write both the schemes
+    in the text box, <em>without changing the order</em>.</font></li>
+  <li><font face="Trebuchet MS" size="3">For jaati type of verses, follow this order : for
+    &nbsp; '<strong>maatraasamaka</strong>', type 1 into the box. For '<strong>oupachchandasika</strong>'
+    type 2. (There aren't any <strong>aaryaa</strong> verses in the exercises)</font></li>
+</ul>
+
+<p><font face="Trebuchet MS" size="3"><br>
+</font><font face="Trebuchet MS" size="5">(*)</font><big><big> <font face="Xdvng">AD:rö
+m:D:Ørö v:dn:ö m:D:Ørö n:y:n:ö m:D:Ørö hes:t:ö m:D:Ørö . </font><br>
+<font face="Xdvng">&nbsp;&nbsp;&nbsp;Ædy:ö m:D:Ørö g:m:n:ö m:D:Ørö
+m:T:ØraeD:p:t:ðreK:	l:ö m:D:Ørö .. </font><br>
+</big></big><font face="Trebuchet MS" size="3">(*) adharam madhuram vadanam madhuram
+nayanam madhuram hasitam madhuram <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hrdayam madhuram gamanam madhuram mathuraadhipaterakhilam
+madhuram </font><font size="3" face="Verdana"><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong></font></p>
+
+<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=adh height=0 width=0>
+<param name="filename" value="wavefile\adharam.wav">
+</object>
+<script>
+adh.showdisplay=false
+adh.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "adh.run()">
+<input type=button name=stop value="Stop" onclick = "adh.stop()">
+
+<form METHOD="POST" NAME="adharam">
+  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
+  VALUE="   OK   "
+  ONCLICK="Extract(T1.value)
+if (lcase(strScheme) = &quot;sasasasa&quot;) then
+   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
+          &quot;Scheme : sa sa sa sa&quot; &amp; chr(13) &amp; _
+          &quot;Name   : toTaka&quot; &amp; chr(13) &amp; _
+          &quot;Class  : jagatee&quot; &amp; chr(13) &amp; _
+          &quot;Speciality : Only one gaNa is used throughout&quot;,,&quot;Chhandas Exercises&quot;
+else
+   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
+end if"
+  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
+  ONCLICK="msgbox&quot;His lip is sweet, his face is sweet, his eye is &quot; &amp; _
+&quot;sweet, his smile is sweet, his heart is sweet, his gait &quot; &amp; _
+&quot;is sweet, everything of the lord of Mathura (Lord Krshna) &quot; &amp; _
+&quot;is sweet.&quot; &amp; chr(13) &amp; &quot;(MadhuraaShTakam)&quot;,,&quot;Chhandas Exercises&quot;"
+  NAME="mean"> </p>
+</form>
+
+<p><font face="Xdvng"><br>
+<big><big>s:p:aüH ep:b:ent: p:v:n:ö n: c: dÙb:ül:ast:ð </font><br>
+<font face="Xdvng">S:Ø\kóst:àN:òH v:n:g:j:a b:el:n::ð B:v:ent: . </font><br>
+<font face="Xdvng">kndòH Pl:òm:Øüen:v:raH x:p:y:ent: kal:ö </font><br>
+<font face="Xdvng">s:nt::ð\: Ov: p:Ø,\:sy: p:rö en:D:an:ö .. </font><br>
+</big></big><font face="Trebuchet MS" size="3">sarpaaH pibanti pavanam na cha durbalaaste <br>
+shuShkaistrNaiH vanagajaa balino bhavanti <br>
+kandaiH phalairmunivaraaH kShapayanti kaalam <br>
+santoSha eva puruShasya param nidhaanam </font>
+<p>
+<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=sarpah height=0 width=0>
+<param name="filename" value="wavefile\sarpaah.wav">
+</object>
+<script>
+sarpah.showdisplay=false
+sarpah.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "sarpah.run()">
+<input type=button name=stop value="Stop" onclick = "sarpah.stop()">
+
+<form METHOD="POST" NAME="sarpa">
+  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
+  VALUE="   OK   "
+  ONCLICK="Extract(T1.value)
+if (lcase(strScheme) = &quot;tabhajajagaga&quot;) then
+   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
+          &quot;Scheme  : ta bha ja ja ga ga&quot; &amp; chr(13) &amp; _ 
+          &quot; Name   : vasantatilaka&quot; &amp; chr(13) &amp; _ 
+          &quot; Class  : shakvaree&quot;,,&quot;Chhandas Exercises&quot;
+else
+   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
+end if"
+  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
+  ONCLICK="MSGBOX &quot;Seprents eat only air ,but still are not weak.&quot; &amp; _
+       &quot;The elephants remain strong in spite of the small amount of grass they eat.&quot; &amp; _
+       &quot;The sages spend their lives only on roots and fruits.Contentment alone is man's biggest treasure.&quot;,,&quot;Chhandas Exercies&quot;"
+  NAME="mean"> </p>
+</form>
+
+<p><font face="Trebuchet MS" size="3"><br>
+</font><big><big><font face="Xdvng">s:ØK:ö eh dÙHK:any:n:ØB:Üy: S::ðB:t:ð
+G:n:anD:karðe\v:v: dip: dS:ün:ö . </font><br>
+<font face="Xdvng">s:ØK:a¶:Ø y::ð y:aet: n:r:ð derdÓt:aö D:àt:H S:rirðN: m:àt:H
+s: j:iv:et: .. </font><br>
+</big></big><font face="Trebuchet MS" size="3">sukham hi duHkhaanyanubhooya shobhate
+ghanaandhakaareShviva deepa darshanam <br>
+sukhaattu yo yaati naro daridrataam dhrtaH shareereNa mrtaH sa jeevati </font>
+
+<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=sukh height=0 width=0>
+<param name="filename" value="wavefile\sukha.wav">
+</object>
+<script>
+sukh.showdisplay=false
+sukh.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "sukh.run()">
+<input type=button name=stop value="Stop" onclick = "sukh.stop()">
+
+<form METHOD="POST" NAME="sukham">
+  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
+  VALUE="   OK   "
+  ONCLICK="Extract(T1.value)
+if (lcase(strScheme) = &quot;jatajara&quot;) then
+   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
+          &quot;Scheme  : ja ta ja ra&quot; &amp; chr(13) &amp; _ 
+          &quot; Name   : vanmshastha&quot; &amp; chr(13) &amp; _ 
+          &quot; Class  : jagatee&quot;,,&quot;Chhandas Exercises&quot;
+else
+   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
+end if"
+  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
+  ONCLICK="msgbox&quot;Happiness is better enjoyed after experiencing &quot; &amp; _
+&quot;miseries. It is like the sight of lamp in darkness. &quot; &amp; _
+&quot;But, if a man becomes poor after enjoying happiness, he &quot; &amp; _
+&quot;is like a dead man, though with a body.&quot;,,&quot;Chhandas Exercises&quot;"
+  NAME="mean"> </p>
+</form>
+
+<p><font face="Xdvng"><br>
+<big><big>krarev:ndðn: p:darev:ndm:Î m:ØK:arev:ndð ev:en:v:ðS:y:nt:m:Î . </font><br>
+<font face="Xdvng">v:Xsy: p:*:sy: p:ØXð S:y:an:m:Î b:al:ö m:ØkÙndm:Î
+m:n:s:asm:raem: .. </font><br>
+</big></big><font face="Trebuchet MS" size="3">karaaravindena padaaravindam mukhaaravinde
+viniveshayantam <br>
+vaTasya patrasya puTe shayaanam baalam mukundam manasaasmaraami </font>
+
+<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=kara height=0 width=0>
+<param name="filename" value="wavefile\karaara.wav">
+</object>
+<script>
+kara.showdisplay=false
+kara.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "kara.run()">
+<input type=button name=stop value="Stop" onclick = "kara.stop()">
+
+<form METHOD="POST" NAME="karaaravinda">
+  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
+  VALUE="   OK   "
+  ONCLICK="Extract(T1.value)
+if (lcase(strScheme) = &quot;jatajagagatatajagaga&quot;) then
+   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
+          &quot;Schemes : ja ta ja ga ga (upendravajraa)&quot; &amp; chr(13) &amp; _ 
+          &quot;          ta ta ja ga ga (indravajraa)&quot; &amp; chr(13) &amp; _
+          &quot; Name   : upajaati&quot; &amp; chr(13) &amp; _
+          &quot; Class  : triShThubh &quot;,,&quot;Chhandas Exercises&quot;
+else
+   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
+end if"
+  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
+  ONCLICK="msgbox&quot;I bow to that child Mukunda, who has his lotus-foot &quot; &amp; _
+&quot;inserted into his lotus-mouth by his lotus-hands, and who &quot; &amp; _
+&quot;is reclining in the cavity of the basil leaf.&quot; &amp; chr(13) &amp; _
+&quot;(From MukundaaShThakam)&quot;,,&quot;Chhandas Exercises&quot;"
+  NAME="mean"> </p>
+</form>
+
+<p><font face="Trebuchet MS" size="3"><br>
+</font><big><big><font face="Xdvng">y:T:a Êðkñn: c:#ñN: n: rT:sy: g:et:B:üv:ðt:Î . </font><br>
+<font face="Xdvng">t:T:a p:Ø,\:karðN: ev:n:a dòv:ö n: es:Dy:t:ð .. </font><br>
+</big></big><font face="Trebuchet MS" size="3">yathaa hyekena chakreNa na rathasya
+gatirbhavet <br>
+tathaa puruShakaareNa vinaa daivam na sidhyate </font>
+
+<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=yataa height=0 width=0>
+<param name="filename" value="wavefile\yathaa.wav">
+</object>
+<script>
+yataa.showdisplay=false
+yataa.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "yataa.run()">
+<input type=button name=stop value="Stop" onclick = "yataa.stop()">
+
+<form METHOD="POST" NAME="yathaa">
+  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
+  VALUE="   OK   "
+  ONCLICK="Extract(T1.value)
+
+if (lcase(strScheme) = &quot;shloka&quot; or lcase(strScheme) = &quot;sloka&quot;) then
+   msgbox &quot;You are correct! This scheme is shloka (or) anuShThubh&quot;,,&quot;Chhandas Exercises&quot;
+else
+   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
+end if"
+  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
+  ONCLICK="msgbox&quot;Just as a chariot cannot run on a single wheel, &quot; &amp; _
+&quot;one cannot achieve success by luck alone, without &quot; &amp; _
+&quot;proper effort.&quot;,,&quot;Chhandas Exercises&quot;"
+  NAME="mean"> </p>
+</form>
+
+<p><font face="Xdvng"><br>
+<big><big>et:l:kö m:D:Øev:e¾\::ð l:l:aXð rj:s:a g::ðm:y:j:nm:n:a ev:D:ay: . </font><br>
+<font face="Xdvng">urs:a p:errBy: n:ndg::ðp:H s:Øec:rö t:sy: s:Øm:¤l:aen: dDy::ò .. </font><br>
+</big></big><font face="Trebuchet MS" size="3">tilakam madhuvidviSho lalaaTe rajasaa
+gomayajanmanaa vidhaaya <br>
+urasaa parirabhya nandagopaH suchiram tasya sumangalaani dadhyau </font>
+
+<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=tilak height=0 width=0>
+<param name="filename" value="wavefile\tilakam.wav">
+</object>
+<script>
+tilak.showdisplay=false
+tilak.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "tilak.run()">
+<input type=button name=stop value="Stop" onclick = "tilak.stop()">
+
+<form METHOD="POST" NAME="tilakam">
+  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
+  VALUE="   OK   "
+  ONCLICK="Extract(T1.value)
+if (lcase(strScheme) = &quot;2&quot;) then
+   msgbox &quot;You are correct! It is 'oupachchhandasika'&quot;,,&quot;Chhandas Exercises&quot;
+else
+   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
+end if"
+  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
+  ONCLICK="msgbox&quot;Nandagopa, applying 'tilaka' on the forehead of &quot; &amp; _
+&quot;KrShNa with the ash of burnt cowdung, hugged him to his &quot; &amp; _
+&quot;chest, and blessed  him.&quot; &amp; chr(13) &amp; &quot;(krshna vilaasa kaavyam - sukumaara kavi)&quot;,,&quot;Chhandas Exercises&quot;"
+  NAME="mean"> </p>
+</form>
+
+<p><font face="Trebuchet MS" size="3"><br>
+</font><big><big><font face="Xdvng">s:res:j: en:l:y:ð s:r:ðj: hst:ð D:v:l:t:m:aöS:Øk
+g:nD:m:aly: S::ðB:ð . </font><br>
+<font face="Xdvng">B:g:v:et: her v:ll:B:ð m:n::ðwð e*:B:Øv:n: B:Üet:ker )s:id m:Êö
+.. </font><br>
+</big></big><font face="Trebuchet MS" size="3">sarasija nilaye saroja haste
+Dhavalatamaamshuka gandhamaalya shobhe <br>
+bhagavati hari vallabhe manojne tribhuvana bhootikari praseeda mahyam </font>
+
+<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=sar height=0 width=0>
+<param name="filename" value="wavefile\sarasija.wav">
+</object>
+<script>
+sar.showdisplay=false
+sar.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "sar.run()">
+<input type=button name=stop value="Stop" onclick = "sar.stop()">
+
+<form METHOD="POST" NAME="sarasija">
+  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
+  VALUE="   OK   "
+  ONCLICK="Extract(T1.value)
+if (lcase(strScheme) = &quot;nanarayanajajaraga&quot;) then
+   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
+          &quot;Schemes : na na ra ya &quot; &amp; chr(13) &amp; _ 
+          &quot;          na ja ja ra ga&quot; &amp; chr(13) &amp; _ 
+          &quot; Name   : puShpitaagraa&quot;,,&quot;Chhandas Exercises&quot;
+else
+   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
+end if"
+  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
+  ONCLICK="msgbox&quot;O Goddess seated on a lotus flower! One who has a &quot; &amp; _
+&quot;lotus in her hands! Draped in the whitest of clothes, &quot; &amp; _
+&quot;and wearing garland with good smell, one dear to Hari! &quot; &amp; _
+&quot;One who is present in three worlds! Bless me (with wealth).&quot; &amp; chr(13) &amp; _
+&quot;(Kanakadhaara stotram - Shri Aadi Shankara)&quot;,,&quot;Chhandas Exercises&quot;"
+  NAME="mean"> </p>
+</form>
+
+<p><font face="Trebuchet MS" size="3"><br>
+</font><font face="Trebuchet MS" size="2">(*)</font><big><big> <font face="Xdvng">j:XaXv:ig:l:jj:l:
+)v:ahp:aev:t:sT:l:ð </font><br>
+<font face="Xdvng">&nbsp;&nbsp;&nbsp;g:l:ð|v:l:mby: l:emb:t:aö B:Øj:¤ t:Ø¤
+m:ael:kaö . </font><br>
+<font face="Xdvng">&nbsp;&nbsp;&nbsp;Rm:²m:²m:²m:eÀn:adm:²m:v:üy:ö </font><br>
+<font face="Xdvng">&nbsp;&nbsp;&nbsp;c:kar c:NR t:aNRv:ö t:n::ðt:Øn:eSS:v:eSS:v:ö .. </font><br>
+</big></big><font face="Trebuchet MS" size="3">(*) jaTaaTaveegalajjala
+pravaahapaavitasthale <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gale(a)valambya lambitaam bhujanga tunga maalikaam <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DamaDDamaDDamaDDamanninaadamaDDamarvayam <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chakaara chaNDa taaNDavam tanotunashshivashshivam </font>
+
+<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=jata height=0 width=0>
+<param name="filename" value="wavefile\jataata.wav">
+</object>
+<script>
+jata.showdisplay=false
+jata.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "jata.run()">
+<input type=button name=stop value="Stop" onclick = "jata.stop()">
+
+<form METHOD="POST" NAME="jataa">
+  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
+  VALUE="    OK    "
+  ONCLICK="Extract(T1.value)
+if (lcase(strScheme) = &quot;jarajarajaga&quot;) then
+   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
+          &quot;Scheme : ja ra ja ra ja ga (16 syllables)&quot; &amp; chr(13) &amp; _
+          &quot; Name   : pancha chaamara &quot; &amp; chr(13) &amp; _
+          &quot; Class  : aShTi &quot; &amp; chr(13) &amp; _ 
+          &quot; Speciality : Short and long syllables occur alternately&quot;,, &quot;Chhandas : Exercises&quot;
+else
+   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
+end if"
+  NAME="btnOK"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
+  ONCLICK="msgbox &quot;The water of Ganga, flowing from the matted locks of Lord Shiva, purifies the place in which it falls. In that place, the Lord dances, with the snakes around his neck as garland, and the Damaru sounding 'Damaddama'. Let that Lord give us all auspices.&quot; &amp; chr(13) &amp; _
+       &quot;(shiva taandava stotram - RaavaNa)&quot;,,&quot;Chhandas exercises&quot;"
+  NAME="btnMean"> </p>
+</form>
+
+<p><font face="Trebuchet MS" size="3"><br>
+</font><big><big><font face="Xdvng">m:a kÙ, D:n:j:n: y::òv:n: g:v:üm:Î hret:
+en:m:ð\:at:Î kal:H s:v:üm:Î . </font><br>
+<font face="Xdvng">m:ay:a m:y:em:dö AeK:l:ö ehtv:a b:ÒÉp:dö tv:ö )ev:S: ev:edtv:a ..
+</font><br>
+</big></big><font face="Trebuchet MS" size="3">maa kuru dhanajana yauvana garvam harati
+nimeShaat kaalaH sarvam <br>
+maayaa mayamidam akilam hitvaa brahmapadam tvam pravisha viditvaa</font>
+
+<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=maa height=0 width=0>
+<param name="filename" value="wavefile\maakuru.wav">
+</object>
+<script>
+maa.showdisplay=false
+maa.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "maa.run()">
+<input type=button name=stop value="Stop" onclick = "maa.stop()">
+
+<form METHOD="POST" NAME="maakuru">
+  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
+  VALUE="   OK   "
+  ONCLICK="Extract(T1.value)
+if (lcase(strScheme) = &quot;1&quot;) then
+   msgbox &quot;You are correct! It is maatraasamaka&quot; ,, &quot;Chhandas Exercises&quot;
+else
+   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
+end if"
+  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
+  ONCLICK="msgbox&quot;Do not be proud of your wealth, relations and youth. &quot; &amp; _
+&quot;It can be destroyed in a minute by Time. Know that this &quot; &amp; _
+&quot;world is full of illusions. Leave everything and attain &quot; &amp; _
+&quot;the Brahman.&quot; &amp; chr(13) &amp; &quot;(Bhaja Govindam - Shri Aadi Shankara)&quot;,,&quot;Chhandas Exercises&quot;"
+  NAME="mean"> </p>
+</form>
+
+<p><font face="Xdvng"><br>
+<big><big>kñy:ÜraeN: n: B:Ü\:y:ent: p:Ø,\:m:Î hara n: c:ndÓ:ðjv:l:a </font><br>
+<font face="Xdvng">sn:an:ö n: ev:l:ðp:n:ö n: kÙs:Øm:ö n:al:úkát:a m:ÜD:üj:aH . </font><br>
+<font face="Xdvng">v:aNy:ðka s:m:l:úkr:ðet: p:Ø,\:ö y:a s:öskát:a D:ay:üt:ð </font><br>
+<font face="Xdvng">x:iy:nt:ð K:l:Ø B:Ü\:N:aen: s:t:t:ö v:akÏ B:Ü\:N:ö B:Ü\:N:ö ..
+</font><br>
+</big></big><font face="Trebuchet MS" size="3">keyooraaNi na bhooShayanti puruSham haaraa
+na chandrojvalaa <br>
+snaanam na vilepanam na kusumam naalNkrtaa moordhajaaH <br>
+vaaNyekaa samalaNkaroti puruSham yaa samskrtaa dhaaryate <br>
+kSheeyante khalu bhooShaNaani satatam vaak bhooShaNam bhooShaNam </font>
+
+<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=key height=0 width=0>
+<param name="filename" value="wavefile\kaeyura.wav">
+</object>
+<script>
+key.showdisplay=false
+key.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "key.run()">
+<input type=button name=stop value="Stop" onclick = "key.stop()">
+
+<form METHOD="POST" NAME="keyoora">
+  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
+  VALUE="   OK   "
+  ONCLICK="Extract(T1.value)
+if (lcase(strScheme) = &quot;masajasatataga&quot;) then
+   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
+          &quot;Scheme  : ma sa ja sa ta ta ga&quot; &amp; chr(13) &amp; _ 
+          &quot; Name   : shaardoolavikreeDitam&quot; &amp; chr(13) &amp; _
+          &quot; Class  : atidhrti&quot;,,&quot;Chhandas Exercises&quot;
+else
+   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
+end if"
+  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
+  ONCLICK="msgbox &quot;Bracelets don't decorate (the arms of) men, nor do necklaces decorate women. Nor do bathing, application of sandal paste, flowers, nor decoration of the head. Only speech decorates people.&quot; &amp; _
+       &quot; All other ornaments may perish, but speech (which does not perish) is alone the true ornament.&quot;,,&quot;Chhandas exercises&quot;"
+  NAME="mean"> </p>
+</form>
+
+<p><font face="Trebuchet MS" size="3"><br>
+</font><big><big><font face="Xdvng">l::ðl:ap:t:cc:rN: l:il:ahet:x:ert: hal:ahl:ð
+en:j:PN:ð </font><br>
+<font face="Xdvng">n:àty:nt:m:)et:G: káty:nt:m:)et:m:m:ty:nt: c:a, v:p:Ø\:m:Î .</font><br>
+<font face="Xdvng">dðv:aedeB:ss:m:y: s:ðv:adrtv:ert: hðv:akG::ð\: m:ØK:ròH </font><br>
+<font face="Xdvng">dáÄav:D:an:m:T: t:ØÄav:S::òerm:eherÄav:r:ðD: s:eht:H .. </font><br>
+</big></big><font face="Trebuchet MS">lolaapatachcharaNa leelaahatiksharita haalaahale
+nijaphaNe<br>
+nrtyantamapratigha krtyantamapratimamatyanta chaaru vapuSham .<br>
+devaadibhissamaya sevaadaratvarita hevaakaghoSha mukharaiH<br>
+drShTaavadhaanamatha tuShTaavashaurimahiriShTaavarodha sahitaH .. </font>
+
+<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=lol height=0 width=0>
+<param name="filename" value="wavefile\lolaapa.wav">
+</object>
+<script>
+lol.showdisplay=false
+lol.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "lol.run()">
+<input type=button name=stop value="Stop" onclick = "lol.stop()">
+
+<form METHOD="POST" NAME="lolaa">
+  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
+  VALUE="   OK   "
+  ONCLICK="Extract(T1.value)
+if (lcase(strScheme) = &quot;tabhayajasaramaga&quot;) then
+   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
+          &quot;Scheme  : ta bha ya ja sa ra ma ga&quot; &amp; chr(13) &amp; _ 
+          &quot; Name   : mattebha&quot; &amp; chr(13) &amp; _
+          &quot; Class  : aakrti&quot;,,&quot;Chhandas Exercises&quot;
+else
+   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
+end if"
+  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
+  ONCLICK="msgbox&quot;The serpent along with its beloved praised Lord KrShNa's beautiful form, whose &quot; &amp; _
+      &quot;actions were unchecked, who had no equal, who was dancing on the serpent's hood which was being beaten by his feet gushing forth the poison, and who was being looked at with attention by Devas, who were noisy with their joyful cries, being eager to see him on that occasion.&quot; &amp; chr(13) &amp; _
+      &quot;(Yaadavaabhyudayam - Shri deshika)&quot; ,,&quot;Chhandas Exercises&quot;"
+  NAME="mean"> </p>
+</form>
+
+<p><font face="Xdvng"><br>
+<big><big>v:ag:T:aüev:v: s:öp:àVt::ò v:ag:T:ü )et:p:tt:y:ð . </font><br>
+<font face="Xdvng">j:g:t:H ep:t:r:ò v:ndð p:av:üt:i p:rm:ðÃ:r:ò .. </font><br>
+</big></big><font face="Trebuchet MS" size="3">vaagarthaaviva samprktau vaagartha
+pratipattaye <br>
+jagataH pitarau vande paarvatee parameshvarau </font>
+
+<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=vaag height=0 width=0>
+<param name="filename" value="wavefile\vagartha.wav">
+</object>
+<script>
+vaag.showdisplay=false
+vaag.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "vaag.run()">
+<input type=button name=stop value="Stop" onclick = "vaag.stop()">
+
+<form METHOD="POST" NAME="vaak">
+  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
+  VALUE="   OK   "
+  ONCLICK="Extract(T1.value)
+
+if (lcase(strScheme) = &quot;shloka&quot; or lcase(strScheme) = &quot;sloka&quot;) then
+   msgbox &quot;You are correct! This scheme is shloka (or) anuShThubh&quot;,,&quot;Chhandas Exercises&quot;
+else
+   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
+end if"
+  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
+  ONCLICK="msgbox&quot;Shiva and Paarvathee are the parents of the world, &quot; &amp; _
+&quot;as inseperable as a word and its meaning, I bow to them &quot;&amp; _
+&quot;to know the words and their meanings (to get diction &quot; &amp; _
+&quot;and vocabulary).&quot; &amp; chr(13) &amp; &quot;(Raghuvamsham - Kaalidaasa)&quot;,,&quot;Chhandas Exercises&quot;"
+  NAME="mean"> </p>
+</form>
+
+<p><font face="Xdvng"><br>
+<big><big>m:dn: p:erhr esT:et:ö m:diy:ð m:n:es: m:ØkÙnd p:darev:nd D:aemn: . </font><br>
+<font face="Xdvng">hr n:y:n: káS:an:Øn:a káS::ðes: sm:res: n: c:# p:ra#m:ö m:ØrarðH
+.. </font><br>
+</big></big><font face="Trebuchet MS" size="3">madana parihara sthitim madeeye manasi
+mukunda padaaravinda dhaamni <br>
+hara nayana krshaanunaa krshosi smarasi na chakra paraakramam muraareH </font>
+
+<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=mad height=0 width=0>
+<param name="filename" value="wavefile\madana.wav">
+</object>
+<script>
+mad.showdisplay=false
+mad.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "mad.run()">
+<input type=button name=stop value="Stop" onclick = "mad.stop()">
+
+<form METHOD="POST" NAME="madana">
+  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
+  VALUE="   OK   "
+  ONCLICK="Extract(T1.value)
+if (lcase(strScheme) = &quot;nanarayanajajaraga&quot;) then
+   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
+          &quot;Schemes : na na ra ya &quot; &amp; chr(13) &amp; _ 
+          &quot;          na ja ja ra ga&quot; &amp; chr(13) &amp; _ 
+          &quot; Name   : puShpitaagraa&quot;,,&quot;Chhandas Exercises&quot;
+else
+   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
+end if"
+  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
+  ONCLICK="msgbox&quot;O Manmatha! Forget the thought that you can reside &quot; &amp; _
+&quot;in my mind that is already occupied with the lotus feet &quot; &amp; _
+&quot;of Mukunda. You have already been burnt by Lord Shiva. &quot; &amp; _
+&quot;Have you forgotten the might of Muraari's (KrShNaa's) &quot; &amp; _
+&quot;discus?&quot; &amp; chr(13) &amp; &quot;(Mukunda maala -Shri Kulashekara Aazhvaar)&quot;,,&quot;Chhandas Exercises&quot;"
+  NAME="mean"> </p>
+</form>
+
+<p><font face="Trebuchet MS" size="3"><br>
+</font><big><big><font face="Xdvng">Ag:Òð p:Sy:aem: t:ðj::ð
+en:eb:Rt:rkl:ay:av:l:il::ðB:n:iy:ö </font><br>
+<font face="Xdvng">p:iy:Ü\:apl:aev:t::ð|hö t:dn:Ø t:dÙdrð edvy:kóS::ðrv:ð\:ö . </font><br>
+<font face="Xdvng">t:a,Ny:aröB:rmy:ö p:rm:s:ØK:rs:asv:adr:ðm:aeWc:t:a¤óH </font><br>
+<font face="Xdvng">A:v:it:ö n:arda½òev:ül:s:dÙp:en:\:t:Î s:Øndrim:nRl:òÁ: .. </font><br>
+</big></big><font face="Trebuchet MS" size="3">agre pashyaami tejo
+nibiDatarakalaayaavaleelobhaneeyam <br>
+peeyooShaaplaavitoaham tadanu tadudare divyakaishoraveSham <br>
+taaruNyaarambharamyam paramasukharasaasvaadaromaanchitaangaiH <br>
+aaveetam naaradaadyairvilasadupaniShat sundareemanDalaishcha </font>
+
+<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=ag height=0 width=0>
+<param name="filename" value="wavefile\agrae.wav">
+</object>
+<script>
+ag.showdisplay=false
+ag.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "ag.run()">
+<input type=button name=stop value="Stop" onclick = "ag.stop()">
+
+<form METHOD="POST" NAME="agre">
+  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
+  VALUE="   OK   "
+  ONCLICK="Extract(T1.value)
+if (lcase(strScheme) = &quot;marabhanayayaya&quot;) then
+   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
+          &quot;Scheme : ma ra bha na ya ya ya&quot; &amp; chr(13) &amp; _
+          &quot;Name   : sragdharaa&quot; &amp; chr(13) &amp; _
+          &quot;Class  : prakrti&quot;,,&quot;Chhandas Exercises&quot;
+else
+   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
+end if"
+  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
+  ONCLICK="msgbox&quot;I see a beautiful light in front of me, dense like the flowers of ironwood tree (which are golden in colour). In the middle of that light, I see a divine child, which is beautiful due to the beginning of its youth, surrounded by sages like Naarada, who are experiencing supreme happiness. I also see the Upanishads in the form of ladies surrounding that child. &quot; &amp; _
+       &quot;I am like one drowned in nectar due to this sight. &quot; &amp; chr(13) &amp; _
+       &quot; (NaarayaNeeyam - Naraayana bhatta)&quot;,,&quot;Chhandas Exercises&quot;"
+  NAME="mean"> </p>
+</form>
+
+<p><font face="Xdvng"><br>
+<big><big>v:dn:ö m:D:Øs:Üdn:H kraBy:aö c:rN:a¤ÛÅm:Øp:an:y:t:Î ep:p:as:ØH . </font><br>
+<font face="Xdvng">g:el:t:ðv: t:t:H s:Ør+v:nt:i n:K:m:ØVt:am:eN:dieD:et:cCl:ðn: .. </font><br>
+</big></big><font face="Trebuchet MS" size="3">vadanam madhusoodanaH karaabhyaam
+charaNaanguShThamupaanayat pipaasuH <br>
+galiteva tataH surasravantee nakhamuktaamaNideedhitichchhalena </font>
+
+<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=vad height=0 width=0>
+<param name="filename" value="wavefile\vadanam.wav">
+</object>
+<script>
+vad.showdisplay=false
+vad.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "vad.run()">
+<input type=button name=stop value="Stop" onclick = "vad.stop()">
+
+<form METHOD="POST" NAME="vadanam">
+  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
+  VALUE="   OK   "
+  ONCLICK="Extract(T1.value)
+if (lcase(strScheme) = &quot;2&quot;) then
+   msgbox &quot;You are correct! It is 'oupachchhandasika'&quot;,,&quot;Chhandas Exercises&quot;
+else
+   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
+end if"
+  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
+  ONCLICK="msgbox&quot;KrShNa, the destroyer of Madhu, holding his toe with both hands, brought it to his mouth. It seemed as if Ganga flowed from it in the form of the lustre of the pearl emanating from his nail.&quot; &amp; chr(13) &amp; _
+      &quot;(krshna vilaasa kaavyam - sukumaara kavi)&quot;,,&quot;Chhandas Exercises&quot;"
+  NAME="mean"> </p>
+</form>
+
+<p><font face="Xdvng"><br>
+<big><big>A¤ö hrðH p:Øl:k B:Ü\:N:m:aÂ:y:nt:i <br>
+B:à¤a¤n:ðv: m:ØkØl:aB:rN:m:Î t:m:al:m:Î . <br>
+A¤ikát:aekl: ev:B:Üet:rp:a¤l:il:a <br>
+m:a¤ly: dast:Ø m:m: m:¤l: dðv:t:ay:aH ..<br></font></big></big>
+<font face="Trebuchet MS" size="3">angam hareH pulaka bhooShaNamaashrayantee <br>
+bhrngaanganeva mukulaabharaNam tamaalam <br>
+angeekrtaakila vibhootirapaangaleelaa <br>
+maangalya daastu mama mangala devataayaaH </font>
+
+<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=ang height=0 width=0>
+<param name="filename" value="wavefile\angam.wav">
+</object>
+<script>
+ang.showdisplay=false
+ang.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "ang.run()">
+<input type=button name=stop value="Stop" onclick = "ang.stop()">
+
+<form METHOD="POST" NAME="angam">
+  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
+  VALUE="   OK   "
+  ONCLICK="Extract(T1.value)
+if (lcase(strScheme) = &quot;tabhajajagaga&quot;) then
+   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
+          &quot;Scheme  : ta bha ja ja ga ga&quot; &amp; chr(13) &amp; _ 
+          &quot; Name   : vasantatilaka&quot; &amp; chr(13) &amp; _ 
+          &quot; Class  : shakvaree&quot;,,&quot;Chhandas Exercises&quot;
+else
+   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
+end if"
+  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
+  ONCLICK="msgbox&quot;Goddess LakShmi is seated on Lord ViShNu's chest, making him happy. He appears like a garland with bees on it. Goddess LakShmi's single glance is enough to make one rich. I bow to you, O LakShmi, and pray to you to  bestow wealth upon me. &quot; &amp; chr(13) &amp; _
+      &quot;(Kanakadhaaraa stotram - shri Aadi shankara)&quot;,,&quot;Chhandas Exercises&quot;"
+  NAME="mean"> </p>
+</form>
+
+<p align="center">&nbsp;</p>
+
+<p align="center"><big>[<a href="vshmpage.htm" target="_top">Back</a>] [<a
+href="moods.htm" target="_top">Next</a>]</big></p>
+</body>
+</html>

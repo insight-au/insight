@@ -1,0 +1,4 @@
+[autorun]
+shellexecute=index.htm
+label=InSight'09
+icon="insightlogof.ico"

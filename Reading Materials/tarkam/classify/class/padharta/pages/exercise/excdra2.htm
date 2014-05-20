@@ -1,0 +1,338 @@
+<html>
+
+<head><script LANGUAGE="VBScript">
+<!--
+Sub Message(msg)
+call msgbox(msg,,"Reason ")
+end sub
+dim counter
+
+Sub Right(cnt)
+if (cnt=0) then 
+call msgbox("EXCELLENT. Keep it up.")
+elseif (cnt=1) then
+call msgbox("PERFECT.")
+elseif (cnt=2) then
+call msgbox("RIGHT answer. But you gotta improve")
+elseif (cnt=3) then
+call msgbox("RIGHT answer. But next time try to answer in less number of chances")
+else
+call msgbox("Finally got it RIGHT. Better do your homework.")
+end if
+end sub
+
+Sub Wrong(cnt)
+if cnt=1 then 
+call msgbox("WRONG. Go ahead. Try again.")
+elseif cnt=2 then
+call msgbox("Just think a little.")
+elseif cnt=3 then
+call msgbox("Come on. Give it a thinking.")
+elseif cnt=4 then
+call msgbox("Think .. Think .. Think ...")
+elseif cnt=5 then
+call msgbox("Come on its easy.")
+elseif cnt=6 then
+call msgbox("I don't think you do your homework.")
+else
+call msgbox("Go ahead. Click on solve and find out the right answer.")
+end if
+end sub
+-->
+    </script>
+
+<title>Exercise II - (dravya)</title>
+<meta name="Microsoft Theme" content="none">
+<meta name="Microsoft Border" content="none">
+</head>
+
+<body background="../../../../images/backdrop/cocktail.gif" bgproperties="fixed">
+
+<p align="center"><font face="Copperplate Gothic Bold" color="#800000" size="5">Exercise
+II - Dravya</font></p>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="85%"><font face="Abadi MT Condensed Light" size="4">Now try to answer these
+    questions.&nbsp; Each of the items may be made up of one or more substances.<br>
+    An Item can be an aggregate object(composed of more than one substance).
+    Hence it is possible that an object is classified under more than one substance in the
+    below examples.<br><br>
+    Time is substrate for all matter and so has not been indicated
+    here. Space and direction are all-pervading and are not indicated too.</font></td>
+    <td width="15%"><img src="pen.gif" width="76" height="81" alt="penclchk.wmf (1824 bytes)"></td>
+  </tr>
+</table>
+
+<p align="left">&nbsp;</p>
+
+<hr>
+
+<form METHOD="POST" NAME="f1">
+  <div align="left"><p><font size="5"><i><b>1. Fruit</b></i></font><font face="Lucida Sans"></p>
+  </div></font><table border="0" width="760" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="520"><font face="Lucida Sans" size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4"> Water <input TYPE="checkbox" VALUE="ON" NAME="C5">
+      Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind</strong></font></td>
+      <td width="32%"><font face="Lucida Sans"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (  (f1.c5.checked) ) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f1.reset()
+	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
+f1.C5.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Fruit is primarily one form of earth. But it also has water content in it.  It is this water that is referred to as juice in some fruits.&quot;)
+call f1.reset()" NAME="B3"> </font></td>
+    </tr>
+  </table>
+  <font face="Lucida Sans">
+</form>
+</font>
+
+<p align="left">&nbsp;</p>
+
+<form METHOD="POST" NAME="f2">
+  <div align="left"><p><font size="5"><i><b>2. Animals </b></i></font></p>
+  </div><table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="68%"><font face="Lucida Sans" size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4"> Water <input TYPE="checkbox" VALUE="ON" NAME="C5">
+      Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind </strong></font></td>
+      <td width="32%"><font face="Lucida Sans"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if ( (f2.c5.checked) and (f2.c8.checked) and (f2.c9.checked) ) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f2.reset()
+	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
+f2.C5.Checked=true
+f2.C8.Checked=true
+f2.C9.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot; Animals just like humans are made of earth, but are also characterized by soul and mind.&quot;)
+call f2.reset()" NAME="B3"> </font></td>
+    </tr>
+  </table>
+  <font face="Lucida Sans">
+</form>
+</font>
+
+<p align="left">&nbsp;</p>
+
+<form METHOD="POST" NAME="f3">
+  <div align="left"><p><font size="5"><i><b>3. Lens</b></i></font><font face="Lucida Sans"></p>
+  </div></font><table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="68%"><font face="Lucida Sans" size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4"> Water <input TYPE="checkbox" VALUE="ON" NAME="C5">
+      Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind </strong></font></td>
+      <td width="32%"><font face="Lucida Sans"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if ( f3.c5.checked ) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f3.reset()
+	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
+f3.C5.Checked=true
+" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot; Lens are made of glass (Earth), and have the property of refracting light.&quot;)
+call f3.reset()" NAME="B3"> </font></td>
+    </tr>
+  </table>
+  <font face="Lucida Sans">
+</form>
+</font>
+
+<p>&nbsp;</p>
+
+<form METHOD="POST" NAME="f4">
+  <div align="left"><p><font size="5"><i><b>4. Match Stick</b></i></font><font face="Lucida Sans"></p>
+  </div><table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="68%"><font size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4">
+      Water <input TYPE="checkbox" VALUE="ON" NAME="C5"> Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind </strong></font></td>
+      <td width="32%"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (  (f4.c5.checked) ) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f4.reset()
+	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
+
+f4.C5.Checked=true
+" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot; Match stick is made of earth which produces light due to friction. &quot;)
+call f4.reset()" NAME="B3"> </td>
+    </tr>
+  </table>
+</form>
+</font>
+
+<p align="left">&nbsp;</p>
+
+<form METHOD="POST" NAME="f5">
+  <div align="left"><p><font size="5"><i><b>5. Lightning</b></i></font><font face="Lucida Sans"></p>
+  </div><table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="68%"><font size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4">
+      Water <input TYPE="checkbox" VALUE="ON" NAME="C5"> Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind </strong></font></td>
+      <td width="32%"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" 
+        ONCLICK="if ( f5.c3.checked ) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f5.reset()
+	end if " 
+NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f5.C3.Checked=true"
+
+NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK=
+"
+call Message(&quot;Lightning is classified under fire.This is because just as fire, lightning too has lustre.&quot;)
+call f5.reset()" NAME="B3"> </td>
+    </tr>
+  </table>
+</form>
+</font>
+
+<p align="left">&nbsp;</p>
+
+<form METHOD="POST" NAME="f6">
+  <div align="left"><p><font size="5"><i><b>6. Oil</b></i></font><font face="Lucida Sans"></p>
+  </div><table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="68%"><font size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4">
+      Water <input TYPE="checkbox" VALUE="ON" NAME="C5"> Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind </strong></font></td>
+      <td width="32%"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if ( f6.C5.Checked ) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f6.reset()
+	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
+
+f6.C5.Checked=true
+" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot; Oil is a substance .It has smell (charecterestic of earth).It has fluidity due to the action of heat(Contact with fire)&quot;)
+call f6.reset()" NAME="B3"> </td>
+    </tr>
+  </table>
+</form>
+</font>
+
+<p align="left">&nbsp;</p>
+
+<form METHOD="POST" NAME="f7">
+  <div align="left"><p><font size="5"><i><b>7. Cake</b></i></font><font face="Lucida Sans"></p>
+  </div><table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="68%"><font size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4">
+      Water <input TYPE="checkbox" VALUE="ON" NAME="C5"> Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind &nbsp;&nbsp;&nbsp;&nbsp;</strong></font></td>
+      <td width="32%"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if ( f7.c5.checked ) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f7.reset()
+	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
+
+f7.C5.Checked=true
+" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot; The primary constituent of cake is earth. The consistency is caused due to the presence of air. &quot;)
+call f7.reset()" NAME="B3"> </td>
+    </tr>
+  </table>
+</form>
+</font>
+
+<p align="left">&nbsp;</p>
+
+<form METHOD="POST" NAME="f8">
+  <div align="left"><p><font size="5"><i><b>8. Soft drinks</b></i></font><font face="Lucida Sans"></p>
+  </div></font><table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <font face="Lucida Sans"><td width="68%"></font><font face="Lucida Sans" size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3">
+      Light <input TYPE="checkbox" VALUE="ON" NAME="C4"> Water <input TYPE="checkbox" VALUE="ON" NAME="C5"> Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind &nbsp;&nbsp;</strong></font></td>
+      <td width="32%"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if ( f8.c4.checked ) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f8.reset()
+	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
+
+f8.C4.Checked=true
+" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot; Softdrinks are made of water. The aeration is due to the presence of carbon dioxide (air).&quot;)
+call f8.reset()" NAME="B3"> </td>
+    </tr>
+  </table>
+  <font face="Lucida Sans">
+</form>
+</font>
+
+<p align="left">&nbsp;</p>
+
+<form METHOD="POST" NAME="f9">
+  <div align="left"><p><font size="5"><i><b>9. Rust</b></i></font><font face="Lucida Sans"></p>
+  </div><table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="68%"><font size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4">
+      Water <input TYPE="checkbox" VALUE="ON" NAME="C5"> Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind </strong></font></td>
+      <td width="32%"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if ( f9.c5.checked ) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f9.reset()
+	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
+
+f9.C5.Checked=true
+" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Rust is formed due to oxidation of iron (earth) in presence of moisture (water). &quot;)
+call f9.reset()" NAME="B3"> </td>
+    </tr>
+  </table>
+</form>
+</font>
+
+<p align="left">&nbsp;</p>
+
+<form METHOD="POST" NAME="f10">
+  <div align="left"><p><font size="5"><i><b>10. Gold</b></i></font></p>
+  </div><table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="68%"><font face="Lucida Sans" size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4"> Water <input TYPE="checkbox" VALUE="ON" NAME="C5">
+      Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind </strong></font></td>
+      <td width="32%"><font face="Lucida Sans"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if ( (f10.c3.checked)) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f10.reset()
+	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
+f10.C3.Checked=true
+" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot; Gold is categorised as light due to its lustre.&quot;)
+call f10.reset()" NAME="B3"> </font></td>
+    </tr>
+  </table>
+  <font face="Lucida Sans">
+</form>
+</font>
+
+<hr>
+
+<p><font face="Abadi MT Condensed Light" size="4">Now lets try to understand the various
+qualities that these substances possess.</font></p>
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr>
+    <font face="Lucida Sans" size="3"><td width="33%"><p align="center"><a href="../../sttdrav.htm" target="_parent"><font face="Copperplate Gothic Bold" color="#F8078B"><img src="../../../../images/navbtn/left.gif" alt="left.gif (341 bytes)" border="0" WIDTH="32" HEIGHT="35"></font></a></font></td>
+    <td width="33%"></td>
+    <td width="34%"><p align="center"><a target="_parent" href="../../sttguna.htm"><font face="Copperplate Gothic Bold" color="#F8078B"><img src="../../../../images/navbtn/right.gif" alt="right.gif (337 bytes)" border="0" WIDTH="32" HEIGHT="35"></font></a></td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+</body>
+</html>

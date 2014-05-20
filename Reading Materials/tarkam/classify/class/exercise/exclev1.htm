@@ -1,0 +1,405 @@
+<html>
+
+<head><script LANGUAGE="VBScript">
+<!--
+Sub Message(msg)
+call msgbox(msg,0," Reason ")
+end sub
+dim counter
+
+Sub Right(cnt)
+if (cnt=0) then 
+call msgbox("Excellent. You got it right.",0," Right ")
+elseif (cnt=1) then
+call msgbox("Perfect. Keep it up.",0," Right ")
+elseif (cnt=2) then
+call msgbox("Right answer. But you've got to improve",0," Right ")
+elseif (cnt=3) then
+call msgbox("Right answer. But next time try to answer in less number of chances",0," Right ")
+else
+call msgbox("You finally got it. Better do your homework.",0," Right ")
+end if
+end sub
+
+Sub Wrong(cnt)
+if cnt=1 then 
+call msgbox("No. Go ahead. Try again.",0," Wrong ")
+elseif cnt=2 then
+call msgbox("Just think a little.",0," Wrong ")
+elseif cnt=3 then
+call msgbox("Come on. Give it a thinking.",0," Wrong ")
+elseif cnt=4 then
+call msgbox("Think .. Think .. Think ...",0," Wrong ")
+elseif cnt=5 then
+call msgbox("Come on its easy.",0," Wrong ")
+elseif cnt=6 then
+call msgbox("I don't think you do your homework.",0," Wrong ")
+else
+call msgbox("Go ahead. Click on solve and find out the right answer.",0," Wrong ")
+end if
+end sub
+-->
+</script>
+
+<title>Your first exercise</title>
+<meta name="Microsoft Theme" content="none">
+<meta name="Microsoft Border" content="none">
+</head>
+
+<body background="../../images/backdrop/cocktail.gif" bgproperties="fixed">
+
+<p align="center"><font face="Copperplate Gothic Bold" color="#800000"><big><big>Exercise
+&nbsp;&nbsp; I&nbsp; (</big>Classification<big>)</big></big></font></p>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="87%"><font face="Abadi MT Condensed Light" size="4">Well, by now you must be
+    familiar with the seven Padarthaas. Try to classify the following entities into one of the
+    seven Padarthaas.</font></td>
+    <td width="13%" rowspan="2"><img src="frog.gif" width="91" height="106" alt="ag00007_.gif (7458 bytes)"></td>
+  </tr>
+  <tr>
+    <td width="87%"><font face="Abadi MT Condensed Light" size="4">Check-in one of the
+    padhaartaas and click on the 'Answer' button.<br>
+    Click on 'Solve' if you want to use auto-solve.</font></td>
+  </tr>
+</table>
+
+<hr>
+
+<form METHOD="POST" NAME="f1">
+  <div align="left"><p><font size="5"><i>1. Paper<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f1.c1.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f1.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f1.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Paper is a substance. It is made of wood which is also a substance.&quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f2">
+  <div align="left"><p><font size="5"><i>2. Rain<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f2.c1.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f2.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f2.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Rain is made of water particles. Water particles are again substances that are made of water which in turn is a substance.&quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f3">
+  <div align="left"><p><font size="5"><i>3. Anger<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f3.c2.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f3.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f3.C2.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Anger is a quality posessed by all living beings.&quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f4">
+  <div align="left"><p><font size="5"><i>4. Sleep<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f4.c3.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f4.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f4.C3.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Zzzz..... yeah, who does'nt like to sleep. It is an action, whereby the human mind and body comes to rest. There is yet another definition of sleep. We'll take a look at it later.&quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f5">
+  <div align="left"><p><font size="5"><i>5. Flight<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f5.c3.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f5.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f5.C3.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Flight is the action of 'Walking on Air'. Birds fly; even planes do. It is the action of going up and staying up the air.&quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f6">
+  <div align="left"><p><font size="5"><i>6. Light<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f6.c1.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f6.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f6.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;'God said let there be light and switched on the bulb'.   Yes, light is a substance that exists in the universe. Stars are the source of light and are themselves substances.&quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f7">
+  <div align="left"><p><font size="5"><i>7. Yolk<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f7.c1.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f7.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f7.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;The yolk of the egg is a substance that contains all nutrients for a chicken ... Does that mean the egg came first , then the yolk and then the chicken ? .. Not again&quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f8">
+  <div align="left"><p><font size="5"><i>8. Nectar<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f8.c1.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f8.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f8.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Nectar is the sweet substance that is found in the flowers.&quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f9">
+  <div align="left"><p><font size="5"><i>9. Hardness of a diamond<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f9.c2.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f9.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f9.C2.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Hardness is a quality of Diamond. It is perceived by touch. &quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f10">
+  <div align="left"><p><font size="5"><i>10. Development<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f10.c3.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f10.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f10.C3.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;It is the act of growing up. To bring up to a highly organized state.  &quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f11">
+  <div align="left"><p><font size="5"><i>11. Elasticity<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f11.c2.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f11.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f11.C2.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;It is that quality which causes a substance to recover to its original form of size after stretching.&quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f12">
+  <div align="left"><p><font size="5"><i>12. Hunger<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f12.c2.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f12.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f12.C2.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Hunger is a quality of living things.&quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f13">
+  <div align="left"><p><font size="5"><i>13. Vacuum<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f13.c7.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f13.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f13.C7.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Vacuum is caused due to absence of air.&quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f14">
+  <div align="left"><p><font size="5"><i>14. Ring<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f14.c1.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f14.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f14.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Ring is a small circular band worn on the finger, nose or ears. Is is substance made of metals like gold,silver,etc. &quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f15">
+  <div align="left"><p><font size="5"><i>15. Shoot<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f15.c3.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f15.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f15.C3.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Shooting is the action of letting to fly with force. For example, a bullet flies from a gun. &quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f16">
+  <div align="left"><p><font size="5"><i>16. Nest<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f16.c1.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f16.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f16.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Home of a bird.  It is a substance made of leaves and twigs.&quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f17">
+  <div align="left"><p><font size="5"><i>17. Maximum<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f17.c2.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f17.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f17.C2.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Maximum is greatest possible number or quantity.&quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f18">
+  <div align="left"><p><font size="5"><i>18. Salt<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f18.c1.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f18.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f18.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Salt is primarily a substance obtained from natural substances like sea water and minerals.&quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f19">
+  <div align="left"><p><font size="5"><i>19. Tender coconut<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f19.c1.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f19.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f19.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Tender Coconut is a substance.  It contains an element of water in it.&quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<form METHOD="POST" NAME="f20">
+  <div align="left"><p><font size="5"><i>20. Sharpness of a knife<br>
+  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
+  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f20.c2.checked) then
+	call Right(counter)
+	counter=0
+	else
+	counter=counter+1
+	call Wrong(counter)
+	call f20.reset()
+	end if
+" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f20.C2.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;The relationship between knife and its sharpness is inherent, ie. it is inseparable. &quot;)" NAME="B3"> </p>
+  </div>
+</form>
+</font>
+
+<hr>
+
+<p><font face="Abadi MT Condensed Light" size="4">Now lets look at each category in
+detail.</font></p>
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr>
+    <font face="Lucida Sans" size="3"><td width="33%"><p align="center"><a href="../example/exmlev1.htm" target="_parent"><font face="Copperplate Gothic Bold" color="#F8078B"><img src="../../images/navbtn/left.gif" alt="left.gif (341 bytes)" border="0" WIDTH="32" HEIGHT="35"></font></a></font></td>
+    <td width="33%"></td>
+    <td width="34%"><p align="center"><a target="_parent" href="../padharta/sttdrav.htm"><font face="Copperplate Gothic Bold" color="#F8078B"><img src="../../images/navbtn/right.gif" alt="right.gif (337 bytes)" border="0" WIDTH="32" HEIGHT="35"></font></a></td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+
+<head>
+<title>Solutions</title>
+</head>
+
+<body background="images/backgrnd.jpg" bgproperties="fixed" bgcolor="#FFFFFF">
+
+<p><font color="#008000" face="Comic Sans MS">1.Eliminate the digits greater than half the
+base from&nbsp; 84679 (base 10).</font></p>
+
+<blockquote>
+  <p><font color="#800040"><font face="Comic Sans MS">The answer is&nbsp; </font><img
+  src="images/an1.gif" width="66" height="25" align="absmiddle"><font face="Comic Sans MS">.The
+  working is easy and is left as an exercise.</font></font></p>
+</blockquote>
+
+<p><font color="#008000" face="Comic Sans MS">2. Given that&nbsp; 'b' is&nbsp; the base ,
+d=b-a and e=b-c-1, what is the remainder when&nbsp; <img src="images/qn2.gif" width="67"
+height="26" align="absmiddle">&nbsp; is&nbsp; divided by &nbsp; 80d2e0 ? </font></p>
+
+<blockquote>
+  <p><font face="Comic Sans MS" color="#800040">As 'b' is the base , removing the negative
+  digits from&nbsp;&nbsp; <img src="images/qn2.gif" width="67" height="26" align="absmiddle">,
+  we get 80d2x2, where x=b-c i.e, x=e+1. Therefore, 80d2x2 can be represented 
+  as 80d2(e+1)2. The difference between this and the divisor 80d2e0 is 
+  12(base b) or b+2 (since 12(base b)= bx1 + 2). This is the required remainder.</font></p>
+</blockquote>
+
+<p><font color="#008000" face="Comic Sans MS">3. 'n' being a positive integer, how many
+digits will be there in a base 'n' representation of a number if the base 'n<sup>2</sup>'
+representation had 1947 digits?&nbsp;&nbsp;&nbsp; </font></p>
+
+<p><font face="Comic Sans MS" color="#800040">Consider a '2' digit number in base 'n'
+representation. Let it be (x y)<sub>n</sub> i.e., y + nx. Here, x and y range from 0 to
+n-1. Hence, the largest number that can be represented in 2 digits is when y=x=n-1. This
+number is (n-1) +&nbsp; (n-1).n = n<sup>2</sup>-1. &nbsp; Moreover, in the base n<sup>2 </sup>representation,
+each digit ranges from 0 to n<sup>2</sup>-1. Thus, a&nbsp; base 'n<sup>2</sup>' digit can
+be represented in base 'n' using 2 digits. So, an 'm' digit base 'n<sup>2</sup>' number
+can be represented as a '2m' digit base 'n' number. Thus the answer to our problem is 2 x
+1947 = 3894. To look at it algebraically, see below. </font></p>
+
+<p><font face="Comic Sans MS" color="#800040">Since the base 'n<sup>2</sup>'
+representation of the number referred by the question&nbsp; has 1947 digits, it can be
+represented as :</font></p>
+
+<p><font face="Comic Sans MS" color="#000040">(a<sub>1946</sub>&nbsp; a<sub>1945</sub>
+&nbsp; ...&nbsp; a<sub>2</sub>&nbsp; a<sub>1</sub>&nbsp; a<sub>0</sub>) (base n<sup>2</sup>&nbsp;)
+=&nbsp; a<sub>0</sub> +&nbsp; a<sub>1</sub> n<sup>2</sup>&nbsp; + &nbsp; a<sub>2</sub> n<sup>4</sup>
++&nbsp; ...&nbsp; +&nbsp; a<sub>1946</sub> n<sup>3892</sup></font></p>
+
+<p><font face="Comic Sans MS" color="#800040">where the a<sub>i</sub>s are base 'n<sup>2</sup>'
+digits. Representing each a<sub>i </sub>as 2-digit base'n' numbers, (c<sub>i</sub>b<sub>i</sub>)<sub>n</sub>,
+we get a<sub>i</sub>=b<sub>i</sub>+c<sub>i</sub>n (b<sub>i</sub>,c<sub>i</sub> range from
+0 to n-1). Now the number becomes</font></p>
+
+<p><font face="Comic Sans MS" color="#000040">(a<sub>1946</sub>&nbsp; a<sub>1945</sub>
+&nbsp; ...&nbsp; a<sub>2</sub>&nbsp; a<sub>1</sub>&nbsp; a<sub>0</sub>) (base n<sup>2</sup>
+) =&nbsp; (b<sub>0</sub>+c<sub>0</sub>n) +&nbsp; (b<sub>1</sub>+c<sub>1</sub>n) x n<sup>2</sup>&nbsp;
++&nbsp; ...&nbsp; +&nbsp; (b<sub>1946</sub>+c<sub>1946</sub>n) x n<sup>3892</sup></font></p>
+
+<p><font face="Comic Sans MS" color="#000040">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; = &nbsp; b<sub>0 </sub>+ c<sub>0</sub>n
++ b<sub>1</sub>n<sup>2</sup>&nbsp;+ ... + c<sub>1946</sub>n<sup>3893</sup></font></p>
+
+<p><font face="Comic Sans MS" color="#800040">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=&gt; &nbsp; there are 3894&nbsp; base 'n' digits.</font></p>
+</body>
+</html>

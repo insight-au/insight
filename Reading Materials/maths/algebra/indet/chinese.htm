@@ -1,0 +1,84 @@
+<html>
+
+<head>
+<title>Indeterminate equations</title>
+<meta name="Microsoft Theme" content="none">
+<meta name="Microsoft Border" content="none">
+</head>
+
+<body background="../images/pastel.jpg">
+
+<p><font face="Matisse ITC" size="4" color="#FF0000"><u>The Chinese Remainder Theorem</u></font></p>
+
+<p><font face="Century Schoolbook" size="3" color="#000000">You must be wondering where
+the Chinese Remainder Theorem comes into the picture, when we're discussing Indian maths.
+Well, it is similar to the indeterminate equations that Indian mathematicians like
+Aryabhatta and Bhaskara attempted to solve. </font></p>
+
+<p><font face="Century Schoolbook" size="3" color="#000000">Suppose you have a number N.
+And you have a set of integers (a1, a2, a3,....., an).&nbsp; N, when divided by each of
+these integers leaves a remainder. The idea is to find N, using this relationship.</font></p>
+
+<p><font face="Century Schoolbook" size="3" color="#000000">Confused ? Maybe, this example
+will clear things up.</font></p>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="16%"><font face="Century Schoolbook" size="3" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="../images/marb1.gif" width="22" height="22" alt="WB00882_.gif (263 bytes)">
+    &nbsp;&nbsp;&nbsp;&nbsp; <img src="../images/marb4.gif" width="19" height="19"
+    alt="WB01066_.gif (242 bytes)"><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../images/marb3.gif" width="19" height="19"
+    alt="WB00955_.gif (255 bytes)">&nbsp; <img src="../images/marb1.gif" width="24"
+    height="24" alt="WB00882_.gif (263 bytes)"><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../images/marb2.gif" width="22"
+    height="22" alt="WB00860_.gif (262 bytes)"><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></td>
+    <td width="84%"><font face="Century Schoolbook" size="3" color="#000000">You have X
+    marbles. When you put them in groups of 8, you have 4 left and when you put them in groups
+    of 6, you have 2&nbsp; left. So, the idea is to find X, which is the total number of
+    marbles you have.</font></td>
+  </tr>
+</table>
+
+<p><font face="Century Schoolbook" size="3" color="#000000">Since, X, when divided by 8
+leaves a remainder of 4, we can say that (X - 4) is divisible by 8.<br>
+Similarly, (X - 2) is divisible by 6.</font></p>
+
+<p><font face="Century Schoolbook" size="3" color="#000000">So, what does the theorem
+state ?</font></p>
+
+<p><font face="Century Schoolbook" size="3" color="#000000">The theorem states that a
+solution to the problem exists only when the difference between the remainders is
+divisible by the GCD of the divisors. </font></p>
+
+<p><font face="Century Schoolbook" size="3" color="#000000">So, for the example stated
+above, (4 - 2) is divisible by GCD of 8 &amp; 6 i.e. (4 -2) =2 is divisible by 2. So, a
+solution exists for the example we have stated above.</font></p>
+
+<p><font face="Century Schoolbook" size="3" color="#000000"><strong>X = 6t + 2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --- eqn A</strong></font></p>
+
+<p><font face="Century Schoolbook" size="3" color="#000000"><strong>X = 8s + 4
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --- eqn B</strong></font></p>
+
+<p><font face="Century Schoolbook" size="3" color="#000000">where t &amp; s are integers.</font></p>
+
+<p><font face="Century Schoolbook" size="3" color="#000000">From A &amp; B, we get <br>
+&nbsp;&nbsp;&nbsp; 6t + 2 = 8s + 4 <br>
+&nbsp;&nbsp;&nbsp; 6t + 2 - 4 = 8s<br>
+&nbsp;&nbsp;&nbsp; 6t - 2 = 8s.</font></p>
+
+<p><font face="Century Schoolbook" size="3" color="#000000">This means that 6t -2 is
+divisible by 8. &nbsp; Intuitively, we know that the minimum value of t for which this is
+true is t = 3. This can be proved, using Modulo arithmetic. For now, this intuitive
+understanding will suffice. </font></p>
+
+<p><font face="Century Schoolbook" size="3" color="#000000">Substituting this value for X,
+we have X = 6 * 3 + 2 = 20.&nbsp; So, the total number of marbles you had was 20. Neat,
+huh ? <br>
+<br>
+The most important result of the Chinese remainder theorem is Modulo arithmetic. So, what
+is modulo arithmetic all about ? Take a peek at it <a href="modulo.htm">here.</a></font></p>
+</body>
+</html>

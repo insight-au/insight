@@ -1,0 +1,445 @@
+<html>
+
+<head>
+<title>Chhandas and binomial theorem</title>
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script></head>
+
+<body bgproperties="fixed" background="../images/backdrop/blobkgde.gif" onload="dynAnimation()" text=black>
+
+<p align="center" dynamicanimation="flyBottom" style="position: relative !important; left: 10000 !important"><big><strong><u>Chhandas and
+Binomial Theorem</u></strong></big></p>
+
+<p><small><font face="Trebuchet MS" size="3">Chhandas and binomial theorem? What
+connection can they possibly have? We can hear you asking that question. Well, read along
+to know the answer.</font></small></p>
+
+<p><small><font face="Trebuchet MS" size="3">You know that chhandas uses 2 kinds of
+syllables - long and short. So does a binomial theorem, which uses 2 variables, say 'a'
+and 'b'. </font></small></p>
+
+<p><small><font face="Trebuchet MS" size="3">You might have seen in the table that for 3
+syllables, eight combinations have been used.&nbsp; </font></small></p>
+
+<p><small><font face="Trebuchet MS" size="3">Take a look at the eight gaNaas.&nbsp; We
+have, according to the table, </font></small></p>
+
+<p><font face="Trebuchet MS" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3 long syllables appearing once ( ma ),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 long and 1 short syllable
+appearing thrice ( bha, ja, sa ),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 long and 2 short syllables
+appearing thrice ( ya, ra, ta ),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 short syllables appearing
+once ( na ).</font></p>
+
+<p><small><font face="Trebuchet MS" size="3">In fact, this is the arrangement for a class
+of metre which has 3 syllables per metre.&nbsp; </font></small></p>
+
+<p><font face="Trebuchet MS" size="3">Now consider this expression : (a + b)<sup>3</sup></font></p>
+
+<p><font face="Trebuchet MS" size="3">This can be expanded as : (a + b)<sup>3</sup> =
+1.a<sup>3</sup> + 3.a<sup>2</sup>b + 3.ab<sup>2</sup> + 1.b<sup>3</sup><br>
+If we assume that 'a' represents a long syllable, and 'b' a short one, we have :</font></p>
+
+<p><font face="Trebuchet MS" size="3">&nbsp;&nbsp;&nbsp; a<sup>3</sup>
+corresponding to ma scheme,<br>
+&nbsp;&nbsp;&nbsp; a<sup>2</sup>b term corresponding to the schemes bha, ja, sa,</font><font face="Trebuchet MS" size="4"><br>
+</font><font face="Trebuchet MS" size="3">&nbsp;&nbsp;&nbsp; ab<sup>2</sup> term
+corresponding to the schemes ya, ra, ta, and</font><font face="Trebuchet MS" size="4"><br>
+</font><font face="Trebuchet MS" size="3">&nbsp;&nbsp;&nbsp; b<sup>3</sup> corresponding
+to na scheme.</font></p>
+
+<p><font face="Trebuchet MS" size="3">As you can see, the binomial expansion of (a + b)<sup>3</sup>
+corresponds to the layout of a 3 - syllable per metre class.</font></p>
+
+<p><font face="Trebuchet MS" size="3">For a metre with 4 syllables, we have the following
+:</font></p>
+
+<p><font face="Trebuchet MS" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1
+metre with all 4 syllables long,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 metres with 3 long and 1 short syllable,</font><font face="Trebuchet MS" size="4"><br>
+</font><font face="Trebuchet MS" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 metres
+with 2 long and 2 short syllables, </font><font face="Trebuchet MS" size="4"><br>
+</font><font face="Trebuchet MS" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 metres
+with 1 long and 3 short syllables,</font><font face="Trebuchet MS" size="4"><br>
+</font><font face="Trebuchet MS" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 metre
+with all 4 syllables short.</font></p>
+
+<p><font face="Trebuchet MS" size="3">That is, there will be 16 ( = 1 + 4 + 6 + 4 + 1)
+different combinations for this class. This corresponds to the expansion : </font></p>
+
+<p><small><font face="Trebuchet MS" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(a + b)<sup>4</sup> = 1.a<sup>4</sup> + 4.a<sup>3</sup>b + 6.a<sup>2</sup>b<sup>2</sup> +
+4.ab<sup>3</sup> + 1.b<sup>4</sup></font></small></p>
+
+<p><small><font face="Trebuchet MS" size="3">So you see how nicely binomial theorem fits
+in? Or rather, how the layout of chhandas supports the theory of binomial expansion?</font></small></p>
+
+<p><small><font face="Trebuchet MS" size="3">This method was given in 200 B.C. by <em>Pingala</em>,
+the author of chhandaH-sootra (this is the book that defines the various metres, and their
+syllable patterns). This technique of finding the number of variations of sound was
+practiced by him and other composers, to detect the quality as well as shortcomings of the
+metres. </font></small></p>
+
+<p><small><font face="Trebuchet MS" size="3">In the 10th century A.D., a method was
+developed by a scholar named&nbsp; <em>Halaayudha</em> that would easily find the
+coefficients of the different variations in the expansion of (a + b)<sup>n</sup><sub>. </sub>This
+method, known as <strong>meruprastaara</strong>, is given below : </font></small></p>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="30%">
+  <tr>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>1</strong></font></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>1</strong></font></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>1</strong></font></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>1</strong></font></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>2</strong></font></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>1</strong></font></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>1</strong></font></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>3</strong></font></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>3</strong></font></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>1</strong></font></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>1</strong></font></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>4</strong></font></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>6</strong></font></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>4</strong></font></td>
+    <td width="10%" align="center"></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>1</strong></font></td>
+    <td width="10%" align="center"></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>.</strong></font></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>.</strong></font></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>.</strong></font></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>.</strong></font></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>.</strong></font></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>.</strong></font></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>.</strong></font></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>.</strong></font></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>.</strong></font></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>.</strong></font></td>
+    <td width="10%" align="center"><font face="Trebuchet MS" size="4"><strong>.</strong></font></td>
+  </tr>
+</table>
+</center></div>
+
+<p><small><font face="Trebuchet MS" size="3">Well, this needs no explanation! This is the
+famous Pascal's triangle.Only, it was used by the Indians 4 centuries earlier than it
+appeared anywhere else in the world! Pascal arrived at this triangle only in the 16th
+century.</font></small></p>
+
+<p><font face="Trebuchet MS">This, then, brings us to the end of the little journey we had
+undertaken to explore the world of metres and rhymes. Hope you have enjoyed it. This is
+but the tip of the iceberg, and there are many more such 'goodies' in the Sanskrit
+literature. It only requires you to get interested!</font></p>
+
+<p align="center"><big>[<a target="_top" href="../index.htm">Chhandas Home</a>][<a target="_top" href="moods.htm">Back</a>]</big></p>
+</body>
+</html>

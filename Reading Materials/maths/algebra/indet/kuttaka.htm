@@ -1,0 +1,93 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Kuttaka method</title>
+<meta name="Microsoft Theme" content="none">
+<meta name="Microsoft Border" content="none">
+</head>
+
+<body background="../images/pastel.jpg">
+
+<p><u><font face="Tempus Sans ITC" color="#006633"><strong>Aryabhatta's&nbsp; Kuttaka
+method :</strong></font></u></p>
+
+<p><font face="Century Schoolbook">The word 'kuttaka' means pulveriser(which means&nbsp;
+reducer). This method was developed by Aryabhatta in the 5th century to solve
+indeterminate equations of the form <strong>ax - by = c.</strong></font></p>
+
+<p><u><font face="Tempus Sans ITC" color="#006F37"><strong>Meaning of the equation : </strong></font></u></p>
+
+<p><font face="Century Schoolbook">It is required to determine an integer N which when
+divided by 'a'&nbsp; leaves a remainder r<sub>1</sub> and when divided by 'b' leaves a
+remainder r<sub>2</sub>. (the premise for the chinese remainder theorem !)<br>
+<br>
+From this we get :&nbsp; <br>
+N = xa + r<sub>1</sub><br>
+N = yb + r<sub>2</sub>. <br>
+By equating the first equation with the second we get xa + r<sub>1</sub> = yb + r<sub>2</sub>
+or ax - by = c for c = r<sub>2</sub> - r<sub>1</sub>.</font></p>
+
+<p><font face="Tempus Sans ITC" color="#006834"><strong><u>The&nbsp; method :</u></strong></font></p>
+
+<p><font face="Century Schoolbook">Aryabhata noted that any factor common to a and b
+should be a factor of c (This is what the chinese remainder theorem states ! Amazing how
+people can think the same way !), otherwise the equation has no solution. Dividing a, b
+and c by the greatest common factor of (a,b) we can reduce the equation to the form where
+a and b&nbsp; have no common factor except for 1.<br>
+<br>
+Consider the example : <br>
+<strong>137x + 10 = 60y</strong><br>
+Express the larger of the coefficients(in this case 137 &gt; 60, so choose 137) as product
+of<br>
+the smaller coefficient( i.e 60). Continue doing this, now taking 60 as the larger
+coefficient and so on. Hence, we get Table 1.</font></p>
+<div align="center"><center>
+
+<table border="1" cellspacing="1" width="50%">
+  <tr>
+    <td width="100%" align="center"><p align="center"><font face="Century Schoolbook">137=60*<strong>2</strong>+17<br>
+<align="center">    60=17*<strong>3</strong>+9<br>
+    17=9*<strong>1</strong>+8&nbsp;&nbsp;&nbsp; <br>
+    9=8*<strong>1</strong>+1</font></td>
+    <td width="100%" align="center"><font face="Century Schoolbook">2<br>
+    3<br>
+    1<br>
+    1</font></td>
+    <td width="100%" align="center"><font face="Century Schoolbook">17<br>
+    9<br>
+    8 (LBR)<br>
+    1 (LR)</font></td>
+  </tr>
+  <tr>
+    <td width="100%" align="center"><font face="Century Schoolbook"><strong>Table 1</strong></font></td>
+    <td width="100%" align="center"><font face="Century Schoolbook"><strong>Q</strong></font></td>
+    <td width="100%" align="center"><font face="Century Schoolbook"><strong>R</strong></font></td>
+  </tr>
+</table>
+</center></div>
+
+<p><font face="Century Schoolbook">From this we can form the column of quotients (Column Q
+of Table 1) and the column of remainders (Column R of Table 1). <br>
+<strong>The number of quotients (except the first one of column Q) is odd.</strong> <br>
+Now, we have to find a number called the multiplier (call it z) such that <br>
+<strong>z * LR - 10 =&nbsp; LBR * m<br>
+</strong>Here, 10 is the constant in the equation to be solved (<strong>137x+10=60y</strong>)
+and m is any integer.<br>
+Thus, we get, <strong>z * 1 - 10 = 8 * m</strong>.<br>
+We have 18 * 1 - 10 = 8 * 1 . The 1 on the right hand side is the quotient. <br>
+Thus, we have <strong>z = 18</strong> and <strong>m = 1</strong> for the equation<strong>
+137x + 10 = 60y</strong>.</font></p>
+
+<p><font face="Century Schoolbook"><strong>In the above case, 10 is subtracted because the
+number of quotients is odd. </strong></font></p>
+
+<p><font face="Century Schoolbook">If the number quotients is even, the constant of the
+equation has to be added.</font></p>
+
+<p><font face="Century Schoolbook">Now, a table has to be formed and the solution can be
+read off from it.<br>
+<br>
+How do we form the table ? Click <a href="kuttotal.htm">here</a> to find out.</font></p>
+</body>
+</html>

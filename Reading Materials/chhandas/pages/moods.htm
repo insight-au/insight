@@ -1,0 +1,346 @@
+<html>
+
+<head>
+<title>Metres and moods</title>
+<meta name="Microsoft Border" content="t">
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script></head>
+
+<body background="../images/backdrop/wb00760_.jpg" bgproperties="fixed"
+onload="dynAnimation()" text=black>
+
+<p align="center" dynamicanimation="spiral"
+style="position: relative !important; left: 10000 !important"><big><font
+face="Times New Roman"><u><strong>Metres and Moods</strong></u></font></big></p>
+
+<p><font face="Trebuchet MS">It has been a convention among the poets to use specific
+metres used for specific occasions and moods. For example, the metre 'mandaakraanta' is
+used primarily to express soft feelings, especially of separated lovers. This emotion is
+called 'vipralambha' (separation). 'Meghasandesham' of Kaalidaasa describes such
+situation, where a YakSha, separated from his lover, tells the cloud which he sees to
+carry a message for his beloved. In this work, Kaalidaasa has made use of the
+'mandaakraanta' metre, and brought out the tender feelings wonderfully.</font></p>
+
+<p><font face="Trebuchet MS">Similarly, the metre 'rathoddhataa' is suited for describing
+hurried movements or scenes, or a long journey. The metre 'shikhariNee' is likewise used
+for expressing strong feelings. The metre 'toTaka' is used to describe the march of an
+army, because it uses only one gaNa, and so is smooth and regular to recite. There are
+also metres for different seasons.</font></p>
+
+<p><font face="Trebuchet MS">The poets were also adept at using words blending with the
+moods. This method of using words which reflect the mood of the situation is called </font><font
+face="Trebuchet MS" size="3">onomatopoeia</font><font face="Trebuchet MS">. There are many
+instances of this in the Sanskrit literature, but we shall look at just one of them.</font></p>
+
+<p><font face="Trebuchet MS">Read the following verse, and see whether you can get the
+mood of the verse. What emotion do you think is foremost in it? </font></p>
+
+<blockquote>
+  <blockquote>
+    <font face="Xdvng"><p align="left"></font><big><big><font face="xdvng">s:Xap:Xl:B:i\:N:ð
+    s:rB:s:a¬has::ð»Xð <br>
+    sPÙrt#ÙeD: p:ersPÙXdÏB:ÒØkÙeXkñ|ep: v:V*:ð kát:ð . <br>
+    káp:a kp:Xkñs:ern:Î dn:Øj:eRmB: d¶:st:n:a <br>
+    s:r:ðj: s:dáS:a dáS:a vy:et:eB:\:jy: t:ð vy:jy:t:ð.. </font></big></big><font
+    face="Trebuchet MS">saTaapaTalabheeShaNe sarabhasaaTTahaasodbhaTe <br>
+    sphuratkrudhi parisphuTadbhrukuTike(a)pi vaktre krte . <br>
+    krpaa kapaTakesarin danujaDimbha dattastanaa <br>
+    saroja sadrshaa drshaa vyatibhiShajya te vyajyate ..</font>
+<p>
+<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=sat height=0 width=0>
+<param name="filename" value="wavefile\sataa.wav">
+</object>
+<script>
+sat.showdisplay=false
+sat.showcontrols=false
+</script>
+<input type=button name=play value="Recite" onclick = "sat.run()">
+<input type=button name=stop value="Stop" onclick = "sat.stop()">
+  </blockquote>
+</blockquote>
+
+<p align="left"><font face="Trebuchet MS">Obviously, the first two lines sound very hard,
+and depict, probably, something violent. You may also note that the next two lines sound
+relatively soft. This is because the poet has used hard consonants&nbsp; 'bha', 'pha',
+'Ta', 'ha', 'dha' repeatedly in the first two quarters. But in the next two, he uses 'da',
+'Da', 'sa','sha', 'ja' etc., which are softer to hear.</font></p>
+
+<p><font face="Trebuchet MS">Now we come to the meaning of the verse. It describes the
+appearance of Lord Nrsimha when he came out of the pillar to protect Prahlaada and to kill
+HiraNyakashipu. The first two lines describe how frightening his face was, with his loud
+laugh and contorted eyebrows. The next two lines say how the same face looked kindly at
+Prahlaada and blessed him, as though the Lord were a mother feeding her child with her
+milk! The poet uses hard consonants to express hard feelings, and soft ones to express
+soft feelings. In this way, the reader gets an idea about the situation, even before the
+meaning is understood. </font></p>
+
+<p><font face="Trebuchet MS">Another example is the verse (given as an exercise) that
+describes Lord KrShNa's dance on the hood of the serpent Kaaliya. (It begins thus : 
+'lolaapatachcharaNa...'). Here, the words are chosen so as to give a musical effect to the
+verse, making the verse more rhyming. We can also see the use of alliteration (repeated
+occurrence of similar sounding words) to bring about a musical effect.</font></p>
+
+
+<p align="center"><strong><big>[<a href="lastexer.htm">Back</a>][<a href="binomial.htm">Next</a>]</strong></big></p>
+</body>
+</html>

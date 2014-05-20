@@ -1,0 +1,48 @@
+<body bgcolor="#000000" background="Reading Materials/images/bac.gif">
+
+<div align="center">
+  <center>
+  <p><font face="Calibri"><br>
+  </font>
+  </p>
+  <table border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" width="928" height="459" bgcolor="#FFFFFF" bordercolor="#000000">
+    <tr>
+      <td width="890" height="34">
+      <p align="center"><font face="Calibri" size="7">InSIGHT 2009</font></td>
+    </tr>
+    <tr>
+       	<p align="center"><font face="Calibri">InSight 2009</font></p>
+    </tr>
+    <tr>
+      <td width="890" height="322">
+      	<u><font face="Calibri" size="5">Course Materials</font></u><p>
+		<font face="Calibri" size="4">Please <font color="#0066FF">
+		<a href="Reading%20Materials/firstpg.htm"><font color="#0066FF">click here</font></a></font> 
+		to view all the course materials</font></p>
+		<p>&nbsp;</p>
+		<p><u><font face="Calibri" size="5">Software</font></u></p>
+		<p><font face="Calibri" size="4">Two open source software are included 
+		that help students visualize and enjoy Astronomy. Click on one of the 
+		following.</font></p>
+		<p>&nbsp;</p>
+		<ul>
+			<li><font face="Calibri" size="4"><font color="#0066FF"><b>
+			<a href="Software/Stellarium/stellarium-0.9.1.exe">
+			<font color="#0066FF">Stellarium</font></a></b></font> A planetarium simulator</font></li>
+			<li><font face="Calibri" size="4"><font color="#0066FF"><b>
+			<a href="Software/Celestia/celestia-win32-1.4.0.exe">
+			<font color="#0066FF">Celestia</font></a></b></font> 
+			A space simulator</font></li>
+		</ul>
+		<p>&nbsp;</p>
+		<p align="center"><font face="Calibri"><a href="credits/team.htm">The InSIGHT 
+		Team - Credits</a></font></td>
+    </tr>
+    <tr>
+      <td width="900" height="20" bgcolor="#CCCCCC">
+      <p align="center"><font face="Calibri" size="2">Department of Computer 
+		Science and Engineering, Anna University Chennai</font></td>
+    </tr>
+  </table>
+  </center>
+</div>

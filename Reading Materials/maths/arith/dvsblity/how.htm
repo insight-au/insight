@@ -1,0 +1,82 @@
+<html>
+
+<head>
+<title>PVS Contents</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<base target="main">
+<meta name="Microsoft Theme" content="tidepool 011">
+</head>
+
+<body background="Images/tidbkgde.jpg" bgcolor="#CC9966" text="#000033" link="#660000"
+vlink="#CC0000" alink="#FF3300">
+<!--mstheme--><font face="comic sans ms, arial, helvetica">
+
+<p><font face="Comic Sans MS" color="#004000"><u>How does this method&nbsp; work?</u></font></p>
+
+<p align="left"><font face="Comic Sans MS" color="#400000">Let the base of the numbers we
+consider be 'b'. Let us call the number whose divisibility is to be tested as 'n'. Let the
+divisor be 'd' and the ekadhika be 'e'. Then,</font></p>
+
+<blockquote>
+  <blockquote>
+    <p align="left"><font face="Comic Sans MS" color="#004040">n=bx+y(say)</font></p>
+  </blockquote>
+</blockquote>
+
+<p align="left"><font face="Comic Sans MS" color="#400000">i.e., 'y' is the units digit of
+the number and 'x'- the rest of the digits put together. In finding the ekadhika, we
+multiply the divisor by some number such that the product ends in (b-1) (which is '9' in
+decimal notation).</font></p>
+
+<blockquote>
+  <blockquote>
+    <p align="left"><font face="Comic Sans MS" color="#004040">i.e.,[ d x (some number) ] ends
+    in the digit (b-1)</font></p>
+  </blockquote>
+</blockquote>
+
+<p align="left"><font face="Comic Sans MS" color="#400000">We add '1' to this product and
+knock off the zero in the units place. This is the ekadhika. Therefore for some number
+'p', </font></p>
+
+<blockquote>
+  <blockquote>
+    <p align="left"><font face="Comic Sans MS" color="#004040">(d.p + 1) / b&nbsp; = e&nbsp; </font></p>
+    <p align="left"><font face="Comic Sans MS" color="#004040">=&gt; b.e = d.p + 1 </font></p>
+  </blockquote>
+</blockquote>
+
+<p align="left"><font face="Comic Sans MS" color="#400000">After finding the ekadhika,
+&nbsp; we proceed with osculation. Algebraically, osculation can be described as follows.
+We take the number 'n' (bx+y) and multiply its units digit (y) with the ekadhika (e) and
+add the product with the rest of the digits(x).Therefore, the new number 'm' obtained is </font></p>
+
+<blockquote>
+  <blockquote>
+    <p align="left"><font face="Comic Sans MS" color="#004040">m = y.e + x</font></p>
+    <p align="left"><font face="Comic Sans MS" color="#004040">bm&nbsp;&nbsp;&nbsp; = by.e +
+    bx</font></p>
+    <blockquote>
+      <p align="left"><font face="Comic Sans MS" color="#004040">=y.(dp + 1) + bx ( since b.e =
+      d.p + 1)</font></p>
+    </blockquote>
+    <blockquote>
+      <p align="left"><font face="Comic Sans MS" color="#004040">=ydp + y + bx&nbsp;&nbsp; </font></p>
+      <p align="left"><font face="Comic Sans MS" color="#004040">=ydp + n
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( since n= bx + y)</font></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<p align="left"><font face="Comic Sans MS" color="#400000">We can see that 'm' is the sum
+of 'n' and a number divisible by 'd' (yd.p). Therefore 'n' is divisible by 'd' if and only
+if 'm' is divisible by 'd'. So we have got a smaller number m (Is it smaller always? Why?)
+now to check for&nbsp; divisibility. This number too, can again be reduced to a smaller
+number by osculation. This process is continued until we get a number of the size of the
+divisor whose divisibility can be easily determined.</font></p>
+
+<p align="left"><font face="Comic Sans MS" color="#400000">Thus, the osculation process by
+the ekadhika determines the divisibility of a number by another correctly. </font></p>
+<!--mstheme--></font>
+</body>
+</html>
